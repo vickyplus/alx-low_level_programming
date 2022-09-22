@@ -1,15 +1,64 @@
-#include "main.h"
+#include <stdlib.h>
+
+#include <time.h>
+
+#include <stdio.h>
 
 /**
 
- * _strncat - concatenate two strings but add inputted numbers of bytes
+* main - print if the number is postive, zero, or negative
 
- * 'dest: string to be appended upon
+*
 
- * @dest: string to be appended upon
+* Description: using the main function
 
- * @src: string to be completed at the end of dest
+* this program prints "Programming is positive, zero, or negative
 
- * @n:integer parameter to compare index to
+* Return: 0
 
- * Return: returns new contanated string
+*/
+
+int main(void)
+
+{
+
+int n;
+
+int l;
+
+
+
+srand(time(0));
+
+n = rand() - RAND_MAX / 2;
+
+l = n % 10;
+
+
+
+if (l > 5)
+
+{
+
+	printf("Last digit of %d is %d and is greater than 5\n", n, l);
+
+}
+
+else if (l == 0)
+
+{
+
+	printf("Last digit of %d is %d and is 0\n", n, l);
+
+}
+
+else
+
+{
+
+	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, l);
+
+}
+
+return (0);
+
