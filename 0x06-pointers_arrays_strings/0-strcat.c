@@ -1,62 +1,24 @@
-#include <stdlib.h>
-
-#include <time.h>
-
-#include <stdio.h>
-
-
+#include "main.h"
 
 /**
+ *_strcat - concatenates  the string pointed to by @src to
+ * the end of the string pointed to by @dest
+ *@dest: String that will be appended
+ *@src: String to be concatenated upon
+ *
+ * Return: returns poiner to @dest
+ */
 
-* main - print if the number is postive, zero, or negative
-
-*
-
-* Description: using the main function
-
-* this program prints "Programming is positive, zero, or negative
-
-* Return: 0
-
-*/
-
-int main(void)
-
+char *_strcat(char *dest, char *src)
 {
 
-int n;
+	int index = 0, dest_len = 0;
 
+	while (dest[index++])
+		dest_len++;
 
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 
-srand(time(0));
-
-n = rand() - RAND_MAX / 2;
-
-  /* your code goes there */
-
-if (n > 0)
-
-{
-
-	printf("%i is positive\n", n);
-
+	return (dest);
 }
-
-else if (n == 0)
-
-{
-
-	printf("%i is zero\n", n);
-
-}
-
-else if (n < 0)
-
-{
-
-	printf("%i is negative\n", n);
-
-}
-
-return (0);
-
